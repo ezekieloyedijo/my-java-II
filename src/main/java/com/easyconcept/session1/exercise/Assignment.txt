@@ -1,0 +1,92 @@
+PROJECT 1
+Title: Student Record Management System (SRMS)
+
+📝 Project Brief:
+You are to build a console-based Student Record Management System for a school, using Java. This application must follow Object-Oriented Programming principles, use Java Utility APIs, and be structured like a real-world software system.
+
+ Learning Objectives:
+Practice CRUD operations using Java collections (ArrayList, Map)
+
+Work with the UUID, Scanner, Optional, and Date classes
+
+Learn architectural separation: DTOs, Entity, Repository, Services, UI layer
+
+Improve input validation and user interaction via command-line menus
+
+
+📌 Functional Requirements:
+Create an application that allows a school admin to do the following via a menu-based console app:
+
+Register a new student
+
+View all registered students
+
+Search for a student by name
+
+Update a student’s age
+
+Delete a student by UUID
+
+Exit the program
+
+📁 Required Project Structure:
+Organize your code using packages as follows:
+
+src/
+│
+├── entity/         → Define the Student class
+├── dto/            → Create StudentDto and ResponseDto for data flow
+├── repository/     → A class that holds and manages in-memory student data using a Map or List
+├── service/        → Interface declaring student-related operations
+├── serviceImpl/    → Implements the service logic using repository
+├── utils/          → Optional: for input validation or helper methods
+├── ui/             → A UI manager that interacts with the user using Scanner
+└── Main.java       → The entry point that calls the UI menu
+
+Class and Feature breakdown
+Student (in entity)
+Fields: UUID id, String name, int age
+
+2. StudentDto (in dto)
+Fields: String name, int age
+
+3. ResponseDto (in dto)
+Fields: boolean success, String message
+
+4. StudentRepository (in repository)
+Holds student records using Map<UUID, Student> or List<Student>
+
+Methods: save(), findAll(), findById(), findByName(), delete()
+
+5. StudentService (in service)
+Interface with:
+
+createStudent(StudentDto)
+
+getAllStudents()
+
+getStudentByName(name)
+
+updateStudentAge(id, newAge)
+
+deleteStudent(id)
+
+6. StudentServiceImpl (in serviceImpl)
+Implements the service logic using repository
+
+7. UIManager (in ui)
+Contains a menu system using Scanner
+
+Handles user input and delegates to service layer
+
+8. Main.java
+Initializes the UI and starts the application
+
+Sample Menu
+====== Student Record System ======
+1. Register a student
+2. View all students
+3. Find student by name
+4. Edit student age
+5. Delete student
+6. Exit
