@@ -1,0 +1,27 @@
+Get MySQL Database on your machine
+Database name : school
+Table name: student
+Table structure:  id, name, gender, age
+
+CREATE TABLE students (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    password
+    name VARCHAR(100),
+    gender VARCHAR(10),
+    age INT
+);
+
+After Configuration
+
+Before Running
+Ensure
+1 MySQL is installed and running
+2 The school database and students table exist
+3 The MySQL JDBC driver (mysql-connector-java.jar) is added to your classpath
+
+But we use Maven
+Go to: https://search.maven.org/
+Or search for: mysql-connector-java
+
+Run after adding MySQL-connector-java dependency
+mvn clean install

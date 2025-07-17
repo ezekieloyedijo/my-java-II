@@ -5,6 +5,9 @@ public class LoadingSpinnerTask implements Runnable{
     public void run() {
         String[] spinner = {"|", "/", "-", "\\"};
         int i = 0;
+
+        Thread.currentThread().setName("LoadingSpinnerThread");
+        System.out.println(Thread.currentThread().getName() + " is now RUNNABLE.");
         while (!Thread.currentThread().isInterrupted()) {
             System.out.print("\rCopying file " + spinner[i % spinner.length]);
             i++;

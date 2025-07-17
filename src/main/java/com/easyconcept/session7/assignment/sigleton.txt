@@ -1,0 +1,15 @@
+Central Bank Policy In A Fintech App
+
+A banking system must have one shared settings object across the application that manages:
+1 interestRate
+2 transactionFee
+3 supportedCurrency e.g NGN, USD
+
+This central policy must be shared and updated globally, used by:
+1 LoanCalculator
+2 PaymentProcessor
+
+Hint
+BankPolicyManager Singleton
+LoanCalculator uses the interestRate
+PaymentProcessor uses transactionFee

@@ -14,7 +14,7 @@ public class Main {
         Thread copyThread = new Thread(new FileCopyTask(source, destination));
         Thread spinnerThread = new Thread(new LoadingSpinnerTask());
 
-        // Start spinner before copying
+        // Start spinner before copying this calls the run method
         spinnerThread.start();
         copyThread.start();
 

@@ -1,0 +1,41 @@
+Create a student profile builder, to generate detailed student profiles
+
+
+Scenario : Student have a lot of information stored in their profile. Some fields are required, while others are optional.
+Creating This profile through a constructor would be messy, and error-prone, especially when not all fields are needed at once.
+
+Task - Implement a builder pattern, to simplify the StudentProfile objects
+
+Mandatory fields - fullname, studentId, grade
+Optional fields - guardianName, contactNumber, address, hasScholarship, enrolledSubjects
+
+
+My own Summary of the builder class
+Two methods OF Approach
+1 make the constructor in the Parent class private and empty
+2 Make the constructor in the Parent class accept a builder parameter
+
+Method 1
+The private constructor is empty in the parent class
+Create a public static class Builder - For building the structure of the parent class
+Instantiate the parent class private constructor within the class
+the Builder class could have it's own constructor to instantiate compulsory parameter
+Then create a setter class that set's the value of the parent class member and returns the Builder
+object (this)
+This is what makes us determine which value of the class we are willing to set
+Then create a build function that returns the parent element object itself
+It is in the build function that one can create or do some complex conditional checking
+
+Method 2
+1. Create a parameterized constructor that accepts the Builder type and set all the class member data
+2. Create a static Builder class with all the class member
+3. create a constructor for the Builder class - could initialize compulsory fields
+4. Create a setter that sets the Builder class member and returns the Builder object
+5. Create a build function that returns the new Instance of the parent object and accepts the builder class this object
+
+
+At the point of call, instead of calling the parent class constructor to build and initialize
+the class member, you call the builder class constructor
+If it requires compulsory fields, you pass it, if it does not, the you now have the Builder class
+where you can now start to call the setter method on because it returns the Builder class
+

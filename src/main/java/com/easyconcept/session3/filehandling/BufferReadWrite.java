@@ -8,11 +8,12 @@ public class BufferReadWrite {
     // read it
     public static String read(){
         String classNote = "classnote.txt";
-        StringBuilder content = new StringBuilder(); // To store all lines
+        StringBuilder content = new StringBuilder(); // To append text efficiently without creating new Object
 
-       try (BufferedReader reader = new BufferedReader(new FileReader(classNote)))
+       try (BufferedReader reader = new BufferedReader(new FileReader(classNote))) // Buffered reader so that reading is more Efficient
        {
             String line;
+            // if end of file is reached, it returns null
             while((line = reader.readLine()) != null){
                 content.append(line).append("\n"); // Add the line and newline
             }
