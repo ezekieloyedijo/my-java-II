@@ -1,0 +1,22 @@
+Simulate 4 Real-Life Tasks Happening at the Same Time
+Tasks:
+Downloading a file
+
+Playing music
+
+Typing a document
+
+Checking for system updates
+
+Each task will:
+
+Extend the Thread class
+
+Simulate work using sleep()
+
+Print messages to show progress
+
+Use isAlive() to check if threads are running
+
+Use join() to wait for completion (in main thread)
+
