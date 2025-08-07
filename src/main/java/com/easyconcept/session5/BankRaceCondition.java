@@ -18,6 +18,7 @@ public class BankRaceCondition{
          */
         Runnable withdrawTask = () -> account.withdraw(Thread.currentThread().getName(), 20000);
 
+        //Runnable target, String name
         Thread t1 = new Thread(withdrawTask, "Thread-A");
         Thread t2 = new Thread(withdrawTask, "Thread-B");
 

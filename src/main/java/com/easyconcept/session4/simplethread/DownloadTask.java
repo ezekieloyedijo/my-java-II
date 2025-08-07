@@ -5,7 +5,7 @@ public class DownloadTask extends Thread {
         System.out.println("Download started...");
         try {
             Thread.currentThread().setName("DownloadTask");
-            System.out.println(Thread.currentThread().getName() + " is now RUNNABLE.");
+            System.out.println(Thread.currentThread().getName() + " is now RUNNING.");
             Thread.sleep(3000); // simulates time taken to download
             System.out.println("Download completed.");
         } catch (InterruptedException e) {
