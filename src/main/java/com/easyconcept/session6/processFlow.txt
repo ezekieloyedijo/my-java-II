@@ -23,5 +23,11 @@ But we use Maven
 Go to: https://search.maven.org/
 Or search for: mysql-connector-java
 
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.33</version> <!-- or latest version -->
+</dependency>
+
 Run after adding MySQL-connector-java dependency
 mvn clean install
