@@ -1,8 +1,11 @@
-Class.forName("com.mysql.cj.jdbc.Driver"); → Loads the MySQL JDBC driver class into memory so it can register itself with DriverManager (returns Class<?>).
+Class.forName("com.mysql.cj.jdbc.Driver"); → 
+Loads the MySQL JDBC driver class into memory so it can register itself with DriverManager (returns Class<?>).
 
-DriverManager.getConnection(url, user, password); → Opens a new database connection using the given URL, username, and password (returns Connection).
+DriverManager.getConnection(url, user, password); → 
+Opens a new database connection using the given URL, username, and password (returns Connection).
 
-PreparedStatement pstmt = conn.prepareStatement("INSERT INTO users (name, email) VALUES (?, ?)"); → Creates a precompiled SQL statement with parameter placeholders (?) ready for secure value substitution (returns PreparedStatement).
+PreparedStatement pstmt = conn.prepareStatement("INSERT INTO users (name, email) VALUES (?, ?)"); → 
+Creates a precompiled SQL statement with parameter placeholders (?) ready for secure value substitution (returns PreparedStatement).
 
 pstmt.setString(1, name); → Sets the first placeholder (?) in the SQL to a String value (void, no return).
 
@@ -10,12 +13,16 @@ pstmt.setInt(2, 25); → Sets the second placeholder (?) in the SQL to an intege
 
 pstmt.setFloat(3, 43.3); → Sets the third placeholder (?) in the SQL to a floating-point value (void, no return).
 
-pstmt.executeUpdate(); → Executes the SQL that modifies data (INSERT, UPDATE, DELETE) and returns the number of rows affected (int).
+pstmt.executeUpdate(); →
+Executes the SQL that modifies data (INSERT, UPDATE, DELETE) and returns the number of rows affected (int).
 
-Statement stmt = conn.createStatement(); → Creates a Statement object for executing simple SQL queries without parameters (returns Statement).
+Statement stmt = conn.createStatement(); → 
+Creates a Statement object for executing simple SQL queries without parameters (returns Statement).
 
-ResultSet rs = stmt.executeQuery("SELECT * FROM users"); → Executes a SQL query that retrieves data and returns the result as a scrollable row set (ResultSet).
+ResultSet rs = stmt.executeQuery("SELECT * FROM users"); → 
+Executes a SQL query that retrieves data and returns the result as a scrollable row set (ResultSet).
 
 rs.next(); → Moves the cursor to the next row in the result set and returns true if a row exists, otherwise false (boolean).
 
-rs.getInt("id") + ": " + rs.getString("name"); → Retrieves an integer from the id column and a string from the name column in the current row, then concatenates them into a string.
+rs.getInt("id") + ": " + rs.getString("name"); → 
+Retrieves an integer from the id column and a string from the name column in the current row, then concatenates them into a string.
