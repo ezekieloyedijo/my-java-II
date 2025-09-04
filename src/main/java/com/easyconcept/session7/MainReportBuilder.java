@@ -1,5 +1,7 @@
 package com.easyconcept.session7;
 
+import com.easyconcept.session7.singleton.SchoolConfiguration;
+
 public class MainReportBuilder {
     public static void main(String[] args) {
         ReportCard2 reportCard2 = new ReportCard2.Builder()

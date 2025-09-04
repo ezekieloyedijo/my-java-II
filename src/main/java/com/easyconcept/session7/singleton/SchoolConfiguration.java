@@ -63,6 +63,7 @@ public class SchoolConfiguration {
     public static void main(String[] args) {
         SchoolConfiguration schoolConfiguration = SchoolConfiguration.getInstance();
 
+
         schoolConfiguration.setTerm("Second Term");
         System.out.println(schoolConfiguration.getTerm());
 

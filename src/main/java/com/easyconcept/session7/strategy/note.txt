@@ -1,0 +1,8 @@
+Strategy = interchangeable algorithms
+Strategy Pattern
+
+Essence: Defines a family of algorithms, encapsulates each one, and makes them interchangeable.
+
+Problem it solves: Avoids hardcoding multiple conditional statements (if/else or switch) for different behaviors.
+
+Real-world analogy: Payment processing in an e-commerce app — you can pay via PayPal, Credit Card, or Bank Transfer. The payment method is chosen at runtime.

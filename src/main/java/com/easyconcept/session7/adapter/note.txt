@@ -1,0 +1,36 @@
+Adapter Pattern (a.k.a. Wrapper)
+
+Idea: Allows incompatible interfaces to work together.
+
+Essence: Converts one interface into another the client expects.
+
+Problem it solves: You want to use an existing class, but its interface doesn’t match what your code expects.
+
+Example (real world):
+
+A phone charger adapter: US plug → EU socket.
+
+// Progression
+1 StudentProfile class
+2 AdvancedStudent interface
+3 Adapter class -  StudentProfileAdapter
+
+1 We have a simple studentProfile
+2 Now the school says:
+  We also want to store Guardian’s Name and Contact Number for each student, and maybe a Scholarship Status in the future.
+
+ But here’s the problem:
+ You cannot modify StudentProfile because it’s already widely used in the system.
+
+ If you change its constructor or methods, it will break existing code.
+ So instead of modifying the class, you use an Adapter.
+
+ STEP 3
+ We define a new interface that represents the “extended student profile”:
+
+ STEP 4
+ The adapter will wrap the old StudentProfile and add new features without modifying it.
+
+ STEP 5
+ Client Code - Main
+
